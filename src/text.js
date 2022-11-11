@@ -6,7 +6,7 @@ const prompts = require('prompts');
     message: "名前を入力してください",
     name: "username",
     initial: "Kerry",
-    validate: name => name === "ああああ" ? "適当に入力しないで😡" : true
+    validate: name => name.match(/^a{3,}/) ? "適当に入力しないで😡" : true
   });
 
   console.log(response);
